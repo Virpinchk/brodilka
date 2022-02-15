@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/krik-kukaburryi-26188.mp3-561d0222a68f3fb8f5c1d651f38f322d.mp3str"
+
+[deps]
+
+source_file="res://krik-kukaburryi-26188.mp3"
+dest_files=[ "res://.import/krik-kukaburryi-26188.mp3-561d0222a68f3fb8f5c1d651f38f322d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

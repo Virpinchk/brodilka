@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/beg-po-betonu-v-tennisnyh-tuflyah_[Pro-Sound.org].mp3-57c0e3b736429e8f0db05f2fac88bf1e.mp3str"
+
+[deps]
+
+source_file="res://beg-po-betonu-v-tennisnyh-tuflyah_[Pro-Sound.org].mp3"
+dest_files=[ "res://.import/beg-po-betonu-v-tennisnyh-tuflyah_[Pro-Sound.org].mp3-57c0e3b736429e8f0db05f2fac88bf1e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
