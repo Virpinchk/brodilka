@@ -16,7 +16,7 @@ config/icon="res://sprite/icon.png"
 
 [autoload]
 
-Global="*res://global.tscn"
+Global="*res://Global.tscn"
 
 [input]
 

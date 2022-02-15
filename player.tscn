@@ -19,8 +19,9 @@ func _physics_process(delta):
 	get_input()
 	velocity = move_and_slide(velocity)
 	if Input.is_action_just_pressed(\"shut\"):
-		var object = $shoot_ray.get_collider() as Node2D
-		if object.is_in_group(\"enemy\"):
+		print (\"dddddd\")
+		var object = $shut.get_collider() as Node2D
+		if object and object.is_in_group(\"enemy\"):
 			object.dead()
 func _process(delta):
 	look_at(get_global_mouse_position())
@@ -28,7 +29,7 @@ func _process(delta):
 
 func _ready():
 	$\"/root/Global\".player = self
-	pass# Replace with function body.
+
 "
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -52,15 +53,17 @@ texture = ExtResource( 1 )
 current = true
 
 [node name="Light2D" type="Light2D" parent="."]
-position = Vector2( 355, 1 )
+position = Vector2( 531, 8 )
 rotation = -1.57079
-scale = Vector2( 2, 2.04377 )
+scale = Vector2( 3, 3.18333 )
 texture = ExtResource( 2 )
+offset = Vector2( 0, 5 )
 
 [node name="Light2D2" type="Light2D" parent="."]
 scale = Vector2( 3, 3 )
 texture = ExtResource( 3 )
 
-[node name="shutrey" type="RayCast2D" parent="." groups=["enemy"]]
+[node name="shut" type="RayCast2D" parent="."]
 position = Vector2( 0, -8 )
+enabled = true
 cast_to = Vector2( 300, 0 )
