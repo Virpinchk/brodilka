@@ -22,16 +22,16 @@ func _physics_process(delta):
 func dead():
 	active = false # когда враг убит 
 	dead = true
-	$Timer.start() # вкючаем таймер респавна
+	#$Timer.start() # вкючаем таймер респавна
 	$Sprite.visible = false # прячем врага
 	$CollisionShape2D.disabled = true # выключаем коллизию
 
-func respawn_timeout(): # когда враг респавнится
-	dead = false 
-	active = false # снова деактивируемся
-	position = respawn_point # перемещаемся на точку респавна
-	$Sprite.visible = true # показываем врага
-	$CollisionShape2D.disabled = false
+#func respawn_timeout(): # когда враг респавнится
+#	dead = false 
+#	active = false # снова деактивируемся
+#	position = respawn_point # перемещаемся на точку респавна
+#	$Sprite.visible = true # показываем врага
+#	$CollisionShape2D.disabled = false
 "
 
 [sub_resource type="RectangleShape2D" id=3]
