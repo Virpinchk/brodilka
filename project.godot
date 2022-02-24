@@ -8,6 +8,46 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "AiEntity",
+"language": "GDScript",
+"path": "res://scripts/AiEntity.gd"
+}, {
+"base": "Node",
+"class": "GameManager",
+"language": "GDScript",
+"path": "res://scripts/GameManager.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "LivingEntity",
+"language": "GDScript",
+"path": "res://scripts/LivingEntity.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "MelleeEnemy",
+"language": "GDScript",
+"path": "res://scripts/MeleeEnemy.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Player",
+"language": "GDScript",
+"path": "res://scripts/Player.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "RangedEnemy",
+"language": "GDScript",
+"path": "res://scripts/RangedEnemy.gd"
+} ]
+_global_script_class_icons={
+"AiEntity": "",
+"GameManager": "",
+"LivingEntity": "",
+"MelleeEnemy": "",
+"Player": "",
+"RangedEnemy": ""
+}
+
 [application]
 
 config/name="ef bndfbr cbvfd, n nbsetjdfvd  sb as nfnsh dtgfcgewgedshdr98hjhs juestyyuts zbn,mj ehgkjesghwjbefkjqb svhjwq bcfekjykh sjstgrhnlsGJK YHRYEBWUKIYXJNHFBUHKWEYNRIXG UYER YBSKJNG3"
