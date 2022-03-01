@@ -6,14 +6,14 @@
 [ext_resource path="res://beg-po-betonu-v-tennisnyh-tuflyah_[Pro-Sound.org].mp3" type="AudioStream" id=4]
 
 [sub_resource type="GDScript" id=1]
-script/source = "extends KinematicBody2D
+script/source = "extends LivingEntity
 export var alive = true
-export (int) var speed = 300
 
-var velocity = Vector2()
 
-func get_input():
-	velocity = Input.get_vector(\"left\",\"right\",\"up\",\"down\") * speed
+func entity_calculate_target_velocity() ->Vector2:
+	return Input.get_vector(\"left\",\"right\",\"up\",\"down\")*speed
+
+
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed(\"left\"):
@@ -24,8 +24,7 @@ func _physics_process(delta):
 		$run.play()
 	if Input.is_action_just_pressed(\"right\"):
 		$run.play()
-	get_input()
-	velocity = move_and_slide(velocity)
+	entity_move(entity_calculate_target_velocity(),delta)#velocity = move_and_slide(velocity)
 	if Input.is_action_just_pressed(\"shut\") and $kuldaun.is_stopped():
 		
 		var object = $shut.get_collider() as Node2D
