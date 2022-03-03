@@ -1,5 +1,8 @@
 extends Node
+var navigation:Navigation2D = 
 class_name GameManager
+func get_navpath(a,b):
+	return navigation.get_simple_path(a,b)
 
 
 # Declare member variables here. Examples:

@@ -73,7 +73,6 @@ rotation = -1.57079
 scale = Vector2( 3, 3.41494 )
 texture = ExtResource( 2 )
 offset = Vector2( 0, 5 )
-color = Color( 1, 0.819608, 0, 1 )
 
 [node name="Light2D2" type="Light2D" parent="."]
 scale = Vector2( 3, 3 )
