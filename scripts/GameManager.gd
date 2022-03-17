@@ -1,5 +1,5 @@
 extends Node
-var player:WeakRef
+var player:KinematicBody2D
 var navigation:Navigation2D 
 class_name GameManager
 func get_navpath(a,b):

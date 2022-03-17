@@ -94,3 +94,7 @@ func process_movement(delta:float):
 	
 func _physics_process(delta:float):
 	process_movement(delta)
+	
+	
+	
+	
