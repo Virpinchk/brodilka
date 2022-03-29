@@ -80,7 +80,7 @@ func rebirth():
 	entity_HP_changed(max_HP)
 
 func chek_visual_contact(other:LivingEntity)-> bool:
-	var raycast = RayCast.new()
+	var raycast = RayCast2D.new()
 	gamemanager.add_chic(raycast)
 	raycast.cast_to = other.position - position
 	raycast.position = position
