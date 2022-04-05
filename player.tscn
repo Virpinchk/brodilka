@@ -11,8 +11,8 @@ export var alive = true
 
 
 func entity_calculate_target_velocity() ->Vector2:
-	return Input.get_vector(\"left\",\"right\",\"up\",\"down\")*speed
-
+	return speed * Input.get_vector(\"left\",\"right\",\"up\",\"down\")*(Input.get_action_strength(\"run\")/2+1)
+	
 
 
 func _physics_process(delta):
@@ -48,6 +48,7 @@ extents = Vector2( 14.5, 13.5 )
 
 [node name="player" type="KinematicBody2D"]
 script = SubResource( 1 )
+speed = 150.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.999988, -1.5 )
@@ -68,11 +69,11 @@ limit_right = 5800
 limit_bottom = 100000
 
 [node name="Light2D" type="Light2D" parent="."]
-position = Vector2( 560.173, -0.00031153 )
 rotation = -1.57079
 scale = Vector2( 3, 3.41494 )
 texture = ExtResource( 2 )
-offset = Vector2( 0, 5 )
+offset = Vector2( -560, 5 )
+shadow_enabled = true
 
 [node name="Light2D2" type="Light2D" parent="."]
 scale = Vector2( 3, 3 )

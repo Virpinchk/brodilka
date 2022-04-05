@@ -26,14 +26,17 @@ func update_final_target(new_value:Vector2):
 	update_path(gamemanager.get_nothpath) 
 
 func update_patrol_target():
-	var pre_target := position + Vector2(rand_range(0, 100),0).rotated(deg2rad(rand_range(0,360)))
+	var pre_target := position + Vector2(rand_range(0, 10),0).rotated(deg2rad(rand_range(0,360)))
+	update_final_target((gamemanager.get_node(gamemanager.navnode) as Navigation2D).get_closest_point(pre_target))
 
 func update_target():
 	pass
 
-func process_potrul():
-	if chek_visual_contact(gamemanager.player):
-		new_state(EntityState.CHASE)
+func process_potrol():
+	if gamemanager.player is Player:
+		if chek_visual_contact(gamemanager.player):
+			new_state(EntityState.CHASE)
+			chase_target = gamemanager.player as LivingEntity
 
 func target_entity_position(entity: LivingEntity)-> Vector2:
 	return entity.position
@@ -52,6 +55,7 @@ func process_chase():
 		chase_timeout_timer.start(max(chase_timeout_time, 0))
 	elif new_chase_target_visibility:
 		chase_timeout_timer.stop()
+	chase_target_visibility = new_chase_target_visibility
 
 func pocess_alive():
 	new_state(EntityState.INACTIVE)
@@ -62,4 +66,4 @@ func new_state(new_value):
 		patrol_timeout_timer.start(15)
 	elif new_value != EntityState.PATROL:
 		patrol_timeout_timer.stop()
-		
+
