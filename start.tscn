@@ -29,6 +29,10 @@ tile_data = PoolIntArray( -4915205, 1, 0, -4915204, 1, 0, -4915203, 1, 0, -49152
 position = Vector2( 0, -248 )
 tile_set = ExtResource( 3 )
 format = 1
+tile_data = PoolIntArray( 393209, 1, 0 )
+
+[node name="враг" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1312, 16 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 0, 248 )
@@ -39,9 +43,6 @@ limit_bottom = 912
 
 [node name="Light2D" parent="player" index="3"]
 offset = Vector2( 0, 170 )
-
-[node name="враг" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1312, 16 )
 
 [node name="враг2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1192, 40 )

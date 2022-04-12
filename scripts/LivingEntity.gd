@@ -95,6 +95,17 @@ func process_movement(delta:float):
 func _physics_process(delta:float):
 	process_movement(delta)
 	
-	
+enum EntityFaction {
+	NEUTRAL = 0
+	FRENDLY = 1
+	ENEMY = 2
+}
+export (EntityFaction) var faction : int
+
+func is_enemy(other : LivingEntity) ->bool:
+	if other.faction == EntityFaction.NEUTRAL or  faction == EntityFaction.NEUTRAL:
+		return false
+	else:
+		return other .faction != faction
 	
 	
