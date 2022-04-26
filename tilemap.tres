@@ -8,21 +8,19 @@
 [ext_resource path="res://sprite/5.png" type="Texture" id=6]
 [ext_resource path="res://sprite/7.png" type="Texture" id=7]
 [ext_resource path="res://sprite/dirt.png" type="Texture" id=8]
-[ext_resource path="res://sprite/whater.png" type="Texture" id=9]
+[ext_resource path="res://sprite/grass.png" type="Texture" id=9]
 [ext_resource path="res://sprite/dosra.png" type="Texture" id=10]
 [ext_resource path="res://sprite/zaBOR.png" type="Texture" id=11]
 [ext_resource path="res://sprite/3.png" type="Texture" id=12]
 [ext_resource path="res://sprite/stone.png" type="Texture" id=13]
 [ext_resource path="res://sprite/2.png" type="Texture" id=14]
+[ext_resource path="res://sprite/thater2.png" type="Texture" id=15]
 
 [sub_resource type="OccluderPolygon2D" id=4]
 polygon = PoolVector2Array( 16, 16, 0.0779495, 16, 0, 0, 16, 0 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 8 )
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 8, 7.95833 )
 
 [resource]
 0/name = "Icon"
@@ -47,41 +45,6 @@ extents = Vector2( 8, 7.95833 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
 } ]
 0/z_index = 0
-1/name = "Icon2"
-1/texture = ExtResource( 8 )
-1/tex_offset = Vector2( 0, 0 )
-1/modulate = Color( 0.466667, 0.796078, 0.301961, 1 )
-1/region = Rect2( 0, 0, 16, 16 )
-1/tile_mode = 0
-1/occluder_offset = Vector2( 8, 8 )
-1/navigation_offset = Vector2( 8, 8 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape_one_way = false
-1/shape_one_way_margin = 0.0
-1/shapes = [  ]
-1/z_index = 0
-2/name = "Voda"
-2/texture = ExtResource( 9 )
-2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 0, 0, 16, 16 )
-2/tile_mode = 0
-2/occluder_offset = Vector2( 8, 8 )
-2/navigation_offset = Vector2( 8, 8 )
-2/shape_offset = Vector2( 8, 8 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
-2/shape = SubResource( 3 )
-2/shape_one_way = false
-2/shape_one_way_margin = 1.0
-2/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 3 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
-} ]
-2/z_index = 0
 3/name = "Block"
 3/texture = ExtResource( 3 )
 3/tex_offset = Vector2( 0, 0 )
@@ -236,3 +199,45 @@ extents = Vector2( 8, 7.95833 )
 13/shape_one_way_margin = 0.0
 13/shapes = [  ]
 13/z_index = 0
+14/name = "thater2.png 14"
+14/texture = ExtResource( 15 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 0, 0, 16, 16 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
+15/name = "grass.png 15"
+15/texture = ExtResource( 9 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 0, 0, 16, 16 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
+16/name = "dirt.png 16"
+16/texture = ExtResource( 8 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 0, 0, 16, 16 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shape_offset = Vector2( 0, 0 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+16/shape_one_way = false
+16/shape_one_way_margin = 0.0
+16/shapes = [  ]
+16/z_index = 0
