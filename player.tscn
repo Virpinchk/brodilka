@@ -4,51 +4,14 @@
 [ext_resource path="res://sprite/15.png" type="Texture" id=2]
 [ext_resource path="res://sprite/light.png" type="Texture" id=3]
 [ext_resource path="res://beg-po-betonu-v-tennisnyh-tuflyah_[Pro-Sound.org].mp3" type="AudioStream" id=4]
-
-[sub_resource type="GDScript" id=1]
-script/source = "extends LivingEntity
-export var alive = true
-
-
-func entity_calculate_target_velocity() ->Vector2:
-	return speed * Input.get_vector(\"left\",\"right\",\"up\",\"down\")*(Input.get_action_strength(\"run\")/2+1)
-	
-
-
-func _physics_process(delta):
-	if Input.is_action_just_pressed(\"left\"):
-		$run.play()
-	if Input.is_action_just_pressed(\"down\"):
-		$run.play()
-	if Input.is_action_just_pressed(\"up\"):
-		$run.play()
-	if Input.is_action_just_pressed(\"right\"):
-		$run.play()
-	entity_move(entity_calculate_target_velocity(),delta)#velocity = move_and_slide(velocity)
-	if Input.is_action_just_pressed(\"shut\") and $kuldaun.is_stopped():
-		
-		var object = $shut.get_collider() as Node2D
-		
-		if object and object.is_in_group(\"enemy\"):
-			object.dead()
-		$kuldaun.start()
-func _process(delta):
-	look_at(get_global_mouse_position())
- 
-
-func _ready():
-	$\"/root/Global\".player = self
-	
-
-
-"
+[ext_resource path="res://scripts/Player.gd" type="Script" id=5]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 14.5, 13.5 )
 
 [node name="player" type="KinematicBody2D"]
-script = SubResource( 1 )
-speed = 150.0
+script = ExtResource( 5 )
+faction = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.999988, -1.5 )
@@ -79,7 +42,7 @@ shadow_enabled = true
 scale = Vector2( 3, 3 )
 texture = ExtResource( 3 )
 
-[node name="shut" type="RayCast2D" parent="."]
+[node name="shoot_ray" type="RayCast2D" parent="."]
 position = Vector2( 0, -8 )
 enabled = true
 cast_to = Vector2( 300, 0 )

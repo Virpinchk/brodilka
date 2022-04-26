@@ -7,7 +7,7 @@ func _physics_process(delta):
 			(other as LivingEntity).HP-= 10
 		queue_free()
 	else:
-		position += transform .x*1820*delta  #$RayCast2D  
+		position += transform .x*500*delta  #$RayCast2D  
 
 func _ready():
 	pass 

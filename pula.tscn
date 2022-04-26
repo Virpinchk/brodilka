@@ -2,46 +2,15 @@
 
 [ext_resource path="res://sprite/zobie.png" type="Texture" id=1]
 [ext_resource path="res://pula.png" type="Texture" id=2]
-
-[sub_resource type="GDScript" id=2]
-script/source = "extends KinematicBody2D
-var dead = false
-var active = false
-var respawn_point = Vector2()
- 
-func _physics_process(delta):
-	if active and not dead:
-		var player = $\"/root/Global\".player as KinematicBody2D
-		if player and player.alive:
-			look_at(player.global_position)
-			var player_to_enemy = player.position.direction_to(position)
-			var target = player.position + (player_to_enemy * 250)
-			move_and_slide(global_position.direction_to(target)*7000*delta)
-			if position.distance_to(player.position) < 80:
-				get_tree().reload_current_scene()
-	else:
-		active = $VisibilityNotifier2D.is_on_screen() and not dead
-		
-func dead():
-	active = false # когда враг убит 
-	dead = true
-	#$Timer.start() # вкючаем таймер респавна
-	$Sprite.visible = false # прячем врага
-	$CollisionShape2D.disabled = true # выключаем коллизию
-
-#func respawn_timeout(): # когда враг респавнится
-#	dead = false 
-#	active = false # снова деактивируемся
-#	position = respawn_point # перемещаемся на точку респавна
-#	$Sprite.visible = true # показываем врага
-#	$CollisionShape2D.disabled = false
-"
+[ext_resource path="res://scripts/RangedEnemy.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 20, 15.2773 )
 
 [node name="враг" type="KinematicBody2D" groups=["enemy"]]
-script = SubResource( 2 )
+script = ExtResource( 3 )
+faction = 2
+visibility = NodePath("VisibilityNotifier2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 9, 1 )
