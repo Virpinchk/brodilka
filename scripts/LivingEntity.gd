@@ -18,7 +18,7 @@ func entity_HP_changed(new_value : int):
 		var new_HP = clamp(new_value, 0, max_HP)
 		emit_signal("HP_changed", HP, new_HP)
 		HP = new_HP
-		if new_value == 0:
+		if HP == 0:
 			new_state(EntityState.DEAD)
 			print("you kill")
 	

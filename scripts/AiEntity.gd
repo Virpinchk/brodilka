@@ -26,7 +26,8 @@ func update_final_target(new_value:Vector2):
 	update_path($"/root/GlobalManager".gamemanager.get_navpath(position, final_target))
 
 func update_path(new_value:PoolVector2Array):
-	new_value.remove(0)
+	if new_value.size() >= 1:
+		new_value.remove(0)
 	path = new_value
 	update_target()
 

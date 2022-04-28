@@ -16,7 +16,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("shoot"):
 		var object = $shoot_ray.get_collider() as Node2D
 		if object and object is LivingEntity and is_enemy(object):
-			deal_damage(object as LivingEntity, 23)
+			deal_damage(object as LivingEntity, 5)
 
 
 func death():

@@ -14,8 +14,9 @@ func process_chase():
 		attack_timer.one_shot = true
 		attack_timer.start(attack_cooldown)
 		var proj_instance = projectile.instance()
+		look_at(chase_target.position)
 		proj_instance.position = position
-		proj_instance.rotation = rotation
+		proj_instance.rotation = rotation + deg2rad(rand_range(-10, 10))
 		$"/root/GlobalManager".gamemanager.add_child(proj_instance)
 		
 
