@@ -51,7 +51,7 @@ _global_script_class_icons={
 [application]
 
 config/name="ef bndfbr cbvfd, n nbsetjdfvd  sb as nfnsh dtgfcgewgedshdr98hjhs juestyyuts zbn,mj ehgkjesghwjbefkjqb svhjwq bcfekjykh sjstgrhnlsGJK YHRYEBWUKIYXJNHFBUHKWEYNRIXG UYER YBSKJNG3"
-run/main_scene="res://start.tscn"
+run/main_scene="res://menu.tscn"
 config/icon="res://sprite/icon.png"
 
 [autoload]
