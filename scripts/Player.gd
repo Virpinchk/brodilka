@@ -1,5 +1,6 @@
 extends LivingEntity
 class_name Player
+export var projectile : PackedScene = preload("res://progect tail.tscn")
 #var gamemanager : GameManager
 #var weapon : BaseWeapon
 func _ready():
@@ -14,10 +15,12 @@ func _physics_process(delta):
 	look_at(get_global_mouse_position())
 	
 	if Input.is_action_just_pressed("shoot"):
-		var object = $shoot_ray.get_collider() as Node2D
-		if object and object is LivingEntity and is_enemy(object):
-			deal_damage(object as LivingEntity, 5)
-
+		var proj_instance = projectile.instance()
+		proj_instance.position = position
+		proj_instance.rotation = rotation + deg2rad(rand_range(-10, 10))
+		if proj_instance is Projectile:
+			proj_instance.proj_owner = self
+		$"/root/GlobalManager".gamemanager.add_child(proj_instance)
 
 func death():
 	$"/root/GlobalManager".gamemanager.restart_level()

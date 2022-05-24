@@ -36,6 +36,7 @@ rotation = 4.71239
 scale = Vector2( 3, 3.41494 )
 texture = ExtResource( 2 )
 offset = Vector2( 0, 170 )
+energy = 2.0
 shadow_enabled = true
 
 [node name="Light2D2" type="Light2D" parent="."]
